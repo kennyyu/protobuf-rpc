@@ -1,0 +1,6 @@
+option java_package = "me.kennyyu.rpc.proto";
+option java_multiple_files = true;
+
+message Cheese {
+    required int32 foo = 1;
+}
