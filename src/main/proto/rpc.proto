@@ -1,0 +1,32 @@
+package rpc.proto;
+option java_package = "me.kennyyu.rpc.proto";
+
+option java_outer_classname = "RPC";
+option java_generic_services = true;
+
+// Message containing a service request. Contains the serialized form of
+// the service's request proto.
+// NEXT AVAILABLE TAG: 4
+message ServiceRequest {
+  optional string service_name = 1;
+  optional string method_name = 2;
+  optional bytes request_proto = 3;
+}
+
+// Possible errors that may occur during an RPC Request
+// NEXT AVAILABLE TAG: 3
+enum ServiceError {
+  APPLICATION_ERROR = 0;
+  UNREACHABLE = 1;
+  TIMEOUT = 2;
+}
+
+// Message containing a service response. Contains the serialized form of
+// the service's response proto.
+// NEXT AVAILABLE TAG: 5
+message ServiceResponse {
+  optional string service_name = 1;
+  optional string method_name = 2;
+  optional bytes response_proto = 3;
+  optional ServiceError error = 4;
+}
