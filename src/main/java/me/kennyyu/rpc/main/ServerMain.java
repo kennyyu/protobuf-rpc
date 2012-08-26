@@ -4,15 +4,15 @@ import java.util.concurrent.Executors;
 
 import me.kennyyu.rpc.Server;
 import me.kennyyu.rpc.Servers;
-import me.kennyyu.rpc.main.Math.AddRequest;
-import me.kennyyu.rpc.main.Math.AddResponse;
-import me.kennyyu.rpc.main.Math.DivideRequest;
-import me.kennyyu.rpc.main.Math.DivideResponse;
-import me.kennyyu.rpc.main.Math.MathService;
-import me.kennyyu.rpc.main.Math.MultiplyRequest;
-import me.kennyyu.rpc.main.Math.MultiplyResponse;
-import me.kennyyu.rpc.main.Math.SubtractRequest;
-import me.kennyyu.rpc.main.Math.SubtractResponse;
+import me.kennyyu.rpc.proto.Math.AddRequest;
+import me.kennyyu.rpc.proto.Math.AddResponse;
+import me.kennyyu.rpc.proto.Math.DivideRequest;
+import me.kennyyu.rpc.proto.Math.DivideResponse;
+import me.kennyyu.rpc.proto.Math.MathService;
+import me.kennyyu.rpc.proto.Math.MultiplyRequest;
+import me.kennyyu.rpc.proto.Math.MultiplyResponse;
+import me.kennyyu.rpc.proto.Math.SubtractRequest;
+import me.kennyyu.rpc.proto.Math.SubtractResponse;
 
 import com.google.protobuf.RpcCallback;
 import com.google.protobuf.RpcController;

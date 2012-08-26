@@ -1,5 +1,5 @@
 package rpc.proto;
-option java_package = "me.kennyyu.rpc.main";
+option java_package = "me.kennyyu.rpc.proto";
 
 option java_outer_classname = "Math";
 option java_generic_services = true;
