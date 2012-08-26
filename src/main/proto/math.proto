@@ -1,0 +1,50 @@
+package rpc.proto;
+option java_package = "me.kennyyu.rpc.main";
+
+option java_outer_classname = "Math";
+option java_generic_services = true;
+
+message AddRequest {
+  optional int32 first = 1;
+  optional int32 second = 2;
+}
+
+message AddResponse {
+  optional int32 sum = 1;
+}
+
+message SubtractRequest {
+  optional int32 first = 1;
+  optional int32 second = 2;
+}
+
+message SubtractResponse {
+  optional int32 difference = 1;
+}
+
+message MultiplyRequest {
+  optional int32 first = 1;
+  optional int32 second = 2;
+}
+
+message MultiplyResponse {
+  optional int32 product = 1;
+}
+
+message DivideRequest {
+  optional int32 dividend = 2;
+  optional int32 divisor = 1;
+}
+
+message DivideResponse {
+  optional int32 quotient = 1;
+  optional int32 remainder = 2;
+  optional bool divide_by_zero = 3 [default = false];
+}
+
+service MathService {
+  rpc Add (AddRequest) returns (AddResponse);
+  rpc Subtract (SubtractRequest) returns (SubtractResponse);
+  rpc Multiply (MultiplyRequest) returns (MultiplyResponse);
+  rpc Divide (DivideRequest) returns (DivideResponse);
+}
